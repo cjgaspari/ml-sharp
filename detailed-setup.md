@@ -70,7 +70,7 @@ Conda creates isolated "environments" for different projects, so they don't inte
      ```bash
      conda --version
      ```
-   - You should see something like `conda 24.x.x` (the exact version number may vary)
+   - You should see something like `conda X.X.X` (the exact version number may vary)
    - **If you get an error** saying "conda: command not found":
      - Close Terminal completely and open it again
      - Try the command again
@@ -85,7 +85,7 @@ Now we need to download the SHARP project files to your computer.
 ### Option A: Download via GitHub (Easiest for Beginners)
 
 1. **Go to the GitHub repository:**
-   - Visit: https://github.com/apple/ml-sharp (or the repository URL where this project is hosted)
+   - Visit the repository URL where this project is hosted (check the address bar or the project README for the correct URL)
 
 2. **Download the ZIP file:**
    - Click the green **"Code"** button
@@ -108,9 +108,11 @@ If you're comfortable with Git or have it installed:
 
 ```bash
 cd ~/Documents
-git clone https://github.com/apple/ml-sharp.git
+git clone <repository-url>
 cd ml-sharp
 ```
+
+(Replace `<repository-url>` with the actual Git URL from the GitHub repository)
 
 ---
 
@@ -325,10 +327,11 @@ If the automatic script doesn't work, don't worry! Here's how to start it manual
 
 2. **Or modify the port in the app.py file:**
    - Open `src/sharp/web/app.py` in a text editor
-   - Find the last line: `uvicorn.run(app, host="0.0.0.0", port=8000)`
-   - Change `port=8000` to `port=8080` (or another port)
+   - Look for the line near the end: `uvicorn.run(app, host="0.0.0.0", port=8000)`
+     (Tip: Search for `port=` to find it quickly)
+   - Change `port=8000` to `port=8080` (or another available port number)
    - Save the file and start the server again
-   - Then access it at: http://localhost:8080
+   - Then access it at: http://localhost:8080 (or your chosen port)
 
 ### The Web Interface Won't Load
 
