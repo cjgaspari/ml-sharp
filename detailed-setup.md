@@ -323,11 +323,12 @@ If the automatic script doesn't work, don't worry! Here's how to start it manual
    lsof -ti:8000 | xargs kill -9
    ```
 
-2. **Or use a different port:**
-   ```bash
-   python src/sharp/web/app.py --port 8080
-   ```
-   Then access it at: http://localhost:8080
+2. **Or modify the port in the app.py file:**
+   - Open `src/sharp/web/app.py` in a text editor
+   - Find the last line: `uvicorn.run(app, host="0.0.0.0", port=8000)`
+   - Change `port=8000` to `port=8080` (or another port)
+   - Save the file and start the server again
+   - Then access it at: http://localhost:8080
 
 ### The Web Interface Won't Load
 
